@@ -1,11 +1,12 @@
-// src/components/common/Sidebar.jsx
+// components/common/Sidebar.jsx
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-// import './Sidebar.css';
+import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
+  const location = useLocation();
+  
   const menuItems = [
-    { path: '/dashboard', label: 'Dashboard' },
+    { path: '/', label: 'Dashboard' },
     { path: '/udhar-challan', label: 'Udhar Challan' },
     { path: '/jama-challan', label: 'Jama Challan' },
     { path: '/khatawahi', label: 'Khatawahi' },
@@ -14,19 +15,26 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="sidebar">
-      {menuItems.map((item) => (
-        <NavLink
-          key={item.path}
-          to={item.path}
-          className={({ isActive }) => 
-            isActive ? 'sidebar-link active' : 'sidebar-link'
-          }
-        >
-          {item.label}
-        </NavLink>
-      ))}
-    </aside>
+    <div className="w-64 bg-gray-800 text-white">
+      <div className="p-4">
+        <h2 className="text-2xl font-bold mb-6">Rental System</h2>
+        <nav>
+          {menuItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`block px-4 py-2 rounded mb-1 ${
+                location.pathname === item.path
+                  ? 'bg-gray-900 text-white'
+                  : 'text-gray-300 hover:bg-gray-700'
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+    </div>
   );
 };
 

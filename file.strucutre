@@ -1,0 +1,43 @@
+src/
+├── components/
+│   ├── common/
+│   │   ├── Navbar.jsx
+│   │   ├── Sidebar.jsx
+│   │   ├── Table.jsx
+│   │   ├── Button.jsx
+│   │   └── Form.jsx
+│   ├── dashboard/
+│   │   ├── DashboardStats.jsx
+│   │   ├── StockOverview.jsx
+│   │   └── RecentTransactions.jsx
+│   ├── challans/
+│   │   ├── UdharChallan.jsx
+│   │   ├── JamaChallan.jsx
+│   │   └── ChallanPDF.jsx
+│   ├── khatawahi/
+│   │   ├── ClientList.jsx
+│   │   ├── ClientDetails.jsx
+│   │   └── TransactionHistory.jsx
+│   ├── rojmel/
+│   │   ├── StockStatus.jsx
+│   │   └── StockMovement.jsx
+│   └── billing/
+│       ├── BillGenerator.jsx
+│       └── BillPreview.jsx
+├── pages/
+│   ├── Dashboard.jsx
+│   ├── UdharChallan.jsx
+│   ├── JamaChallan.jsx
+│   ├── Khatawahi.jsx
+│   ├── Rojmel.jsx
+│   └── Billing.jsx
+├── services/
+│   ├── api.js
+│   ├── challanService.js
+│   ├── clientService.js
+│   └── stockService.js
+├── utils/
+│   ├── pdfGenerator.js
+│   ├── calculations.js
+│   └── helpers.js
+└── App.jsx

@@ -1,24 +1,18 @@
-// src/components/common/Navbar.jsx
+// components/common/Navbar.jsx
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-// import './Navbar.css';
 
 const Navbar = () => {
-  const navigate = useNavigate();
-
-  const handleLogout = () => {
-    localStorage.removeItem('isAuthenticated');
-    navigate('/login');
-  };
-
   return (
-    <nav className="navbar">
-      <div className="navbar-brand">
-        Centering Plate Rental
+    <nav className="bg-white border-b border-gray-200 px-4 py-2.5">
+      <div className="flex justify-between items-center">
+        <div className="text-xl font-bold">Centering Plate Rental</div>
+        <div className="flex items-center gap-4">
+          <button className="px-4 py-2 text-sm bg-blue-600 text-white rounded-md">
+            New Transaction
+          </button>
+          <div className="text-sm">Welcome, Admin</div>
+        </div>
       </div>
-      <button onClick={handleLogout} className="logout-btn">
-        Logout
-      </button>
     </nav>
   );
 };

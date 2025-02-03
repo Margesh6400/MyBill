@@ -1,12 +1,13 @@
+
 import React from 'react';
 
 const RecentTransactions = () => {
-  return (
-    <div>
-      <h2>Recent Transactions</h2>
-      {/* Add recent transactions here */}
-    </div>
-  );
+    return (
+        <div>
+            <h1>Recent Transactions</h1>
+            {/* Add your component code here */}
+        </div>
+    );
 };
 
 export default RecentTransactions;
