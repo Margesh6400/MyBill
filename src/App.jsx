@@ -5,10 +5,6 @@ import Navbar from './components/common/Navbar';
 import Sidebar from './components/common/Sidebar';
 import Dashboard from './pages/Dashboard';
 import UdharChallan from './pages/UdharChallan';
-import JamaChallan from './pages/JamaChallan';
-import Khatawahi from './pages/Khatawahi';
-import Rojmel from './pages/Rojmel';
-import Billing from './pages/Billing';
 
 const App = () => {
   return (
@@ -21,10 +17,6 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/udhar-challan" element={<UdharChallan />} />
-              <Route path="/jama-challan" element={<JamaChallan />} />
-              <Route path="/khatawahi" element={<Khatawahi />} />
-              <Route path="/rojmel" element={<Rojmel />} />
-              <Route path="/billing" element={<Billing />} />
             </Routes>
           </main>
         </div>
@@ -34,5 +26,3 @@ const App = () => {
 };
 
 export default App;
-
-

@@ -3,18 +3,25 @@ import React from 'react';
 
 const DashboardStats = () => {
   const stats = [
-    { label: 'Total Stock', value: '1,234' },
-    { label: 'Items Rented', value: '456' },
-    { label: 'Active Clients', value: '89' },
-    { label: 'Today\'s Transactions', value: '12' }
+    { title: 'Total Revenue', value: '₹50,000', change: '+12%' },
+    { title: 'Active Rentals', value: '125', change: '+5%' },
+    { title: 'Pending Returns', value: '28', change: '-2%' },
+    { title: 'Available Stock', value: '450', change: '0%' },
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-      {stats.map((stat, index) => (
-        <div key={index} className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-gray-500 text-sm font-medium">{stat.label}</h3>
-          <p className="text-3xl font-bold mt-2">{stat.value}</p>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {stats.map((stat) => (
+        <div key={stat.title} className="bg-white rounded-lg shadow p-6">
+          <div className="text-sm font-medium text-gray-500">{stat.title}</div>
+          <div className="mt-2 flex items-baseline">
+            <div className="text-2xl font-semibold text-gray-900">{stat.value}</div>
+            <span className={`ml-2 text-sm font-medium ${
+              stat.change.startsWith('+') ? 'text-green-600' : 'text-red-600'
+            }`}>
+              {stat.change}
+            </span>
+          </div>
         </div>
       ))}
     </div>

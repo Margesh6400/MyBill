@@ -3,14 +3,11 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="bg-white border-b border-gray-200 px-4 py-2.5">
-      <div className="flex justify-between items-center">
-        <div className="text-xl font-bold">Centering Plate Rental</div>
-        <div className="flex items-center gap-4">
-          <button className="px-4 py-2 text-sm bg-blue-600 text-white rounded-md">
-            New Transaction
-          </button>
-          <div className="text-sm">Welcome, Admin</div>
+    <nav className="bg-white shadow-sm h-16 flex items-center px-6">
+      <div className="flex items-center justify-between w-full">
+        <h1 className="text-xl font-semibold text-gray-800">Centering Plate Rental</h1>
+        <div className="flex items-center space-x-4">
+          <span className="text-gray-600">Welcome, Admin</span>
         </div>
       </div>
     </nav>
